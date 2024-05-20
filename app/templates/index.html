@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recon</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+    /* Estilo para fixar a logo */
+    .navbar-brand {
+      max-width: 180px; /* Largura máxima da logo */
+    }
+    .navbar-brand img {
+      height: 15vh; /* Altura desejada */
+      width: auto; /* Largura automática para manter a proporção */
+      position: absolute;
+      top: 10px; /* Posição superior */
+      left: 50px; /* Posição esquerda */
+      z-index: 999; /* Z-index para garantir que a imagem fique sobreposta aos outros elementos */
+    }
+
+    footer {
+      background-color: #343a40; /* Cor de fundo escura */
+      color: #ffffff; /* Cor do texto */
+      height: 5vh;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-content > div {
+      padding: 0.5rem 1rem; /* Adicione o espaçamento que deseja */
+    }
+
+    .footer-content > div:first-child {
+      margin-right: auto; /* Move a primeira div para a esquerda */
+      margin-left: 20%;
+    }
+
+    .footer-content > div:last-child {
+      margin-left: auto;
+      margin-right: 20%; /* Move a última div para a direita */
+    }
+
+    .container-session{
+      padding-bottom: 5vh;
+    }
+
+    @media (max-width: 575.98px) {
+
+      footer {
+        height: 6vh;
+        font-size: small;
+      }
+      .footer-content > div:first-child {
+        margin: 0 0 0.5rem 0; /* Remove as margens laterais e adiciona uma margem inferior */
+      }
+
+      .footer-content > div:last-child {
+        margin: 0 0 0.5rem 0; /* Remove as margens laterais e adiciona uma margem inferior */
+      }
+    }
+
+    @media (min-width: 575.99px) and (max-width: 1117.98px) {
+
+      footer {
+        font-size:medium;
+      }
+      .footer-content > div:first-child {
+        margin: 0 0 0.5rem 0; /* Remove as margens laterais e adiciona uma margem inferior */
+      }
+
+      .footer-content > div:last-child {
+        margin: 0 0 0.5rem 0; /* Remove as margens laterais e adiciona uma margem inferior */
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="../public/logo.png" alt="Recon">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Serviços</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="acesso.html">Área do Cliente</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron jumbotron-fluid text-center" id="Sobre">
+    <div class="container">
+      <h1 class="display-4">Gestão de Risco para transporte de cargas</h1>
+      <p class="lead">Uma descrição breve do que seu site oferece.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais</a>
+    </div>
+  </div>
+
+  <div class="container container-session">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Seção 1</h2>
+        <p>Texto ou conteúdo relacionado à Seção 1.</p>
+      </div>
+      <div class="col-md-4">
+        <h2>Seção 2</h2>
+        <p>Texto ou conteúdo relacionado à Seção 2.</p>
+      </div>
+      <div class="col-md-4">
+        <h2>Seção 3</h2>
+        <p>Texto ou conteúdo relacionado à Seção 3.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark fixed-bottom">
+    <div class="footer-content">
+      <div>&copy; 2024 Recon. Todos os direitos reservados.</div>
+      <div><a href="https://wa.me/5566996555525?text=Ol%C3%A1.+Preciso+de+uma+solu%C3%A7%C3%A3o+online+para+o+meu+neg%C3%B3cio%21" target="_blank" class="text-white">Developed by: Apey Solutis and Systems</a></div>
+    </div>
+  </footer>
+  
+
+  <!-- Bootstrap JS e dependências -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript para manipular a visibilidade da logo em modo responsivo -->
+<script>
+    $(document).ready(function(){
+      function toggleLogo() {
+        if ($(window).width() < 992) { // Menos de 992px de largura, modo responsivo
+          $('.navbar-brand').addClass('d-none'); // Oculta a logo
+          $('.navbar-toggler').removeClass('d-none'); // Exibe o botão do menu hamburguer
+          $('.navbar-brand img').removeAttr('alt'); // Remove o atributo 'alt' da imagem da logo
+        } else {
+          $('.navbar-brand').removeClass('d-none'); // Exibe a logo
+          $('.navbar-toggler').addClass('d-none'); // Oculta o botão do menu hamburguer
+          $('.navbar-brand img').attr('alt', 'Recon'); // Restaura o atributo 'alt' da imagem da logo
+        }
+      }
+      
+      // Chama a função ao carregar a página e ao redimensionar a janela
+      toggleLogo();
+      $(window).resize(toggleLogo);
+    });
+  </script>
+</body>
+</html>
