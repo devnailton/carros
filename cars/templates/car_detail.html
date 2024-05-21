@@ -95,7 +95,9 @@
       <p><strong>Ano do modelo:</strong> {{ object.model_year }}</p>
       <p><strong>Placa:</strong> {{ object.plate }}</p>
       <p><strong>Preço:</strong> R$ {{ object.value }}</p>
-      <p><strong>Observações:</strong> {{ object.comments }}</p>
+      {% if object.comments %}
+        <p><strong>Observações:</strong> {{ object.comments }}</p>
+      {% end if %}
   </div>
   {% if user.is_authenticated %}
   <div class="buttons-container">
