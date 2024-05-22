@@ -1,4 +1,4 @@
-#!/home/l-apey/Documents/Github/projeto_carros/venv/bin/python3
+#!/home/ubuntu/projeto_carros/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
