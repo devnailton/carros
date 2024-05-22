@@ -1,4 +1,5 @@
 venv
 .venv
+newvenv
 db.sqlite3
 media
