@@ -2,4 +2,5 @@ venv
 .venv
 newvenv
 db.sqlite3
-media
+*.sqlite3
+__pycache__/
